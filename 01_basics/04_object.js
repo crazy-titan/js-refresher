@@ -41,3 +41,28 @@ console.log(Object.keys(obj3)); // will show all key in ARRAY
 console.log(Object.values(obj3)); // will show all values in ARRAY 
 
 console.log(Object.entries(obj3)); // will give the ARRAY of ARRAY in key:value pain.
+
+
+// Object de-structuring - curly braces {}
+
+const myNewObj = {
+    name: "InsideTech",
+    email: "contact@meetabhinav.com",
+    instructor: "Docs"
+}
+
+// now how to destructure the objects keys
+
+// myNewObj.instructor to access the key but this is not recommended if you have to 
+// use this instructor key at many locations
+
+// Solution
+const {instructor} = myNewObj;
+
+// now object gets destructured 
+console.log(instructor); // it will print Docs
+
+
+// we will see this concept more indepth inside handling API and data coming from database!
+
+// Database response comes in array of Objects.
