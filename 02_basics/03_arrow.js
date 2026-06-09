@@ -58,3 +58,30 @@ newFunction(); // will output any empty object. So, we can say 'this' only show 
 
 // No issue just wrap the { } inside a ( )
 const myFunction = ()=>({country: India})
+
+
+// IIFE (Immediately Invoked Function Expressions)
+
+// Sometime Global scope's variable do polution , to avoid such problem we use IIFE
+
+// Syntax ()();
+
+//Named IIFE --> "iifeFunction"
+(function iifeFunction(){
+    console.log(`DB connected`);
+})()   
+
+; // Very Important Semi-colon
+
+// Simple IIFE --> NO Name
+// Arrow function IIFE
+( ()=>{
+    console.log(`DB connected TWO`);
+} )();
+
+
+// Pass Parameter and call with Argument --> Nothing to worry, treat as "function calling"
+
+(function paramFunction(name){
+    console.log(`Hello, ${name}`)
+})("Abhinav");     // will output as Hello, Abhinav
