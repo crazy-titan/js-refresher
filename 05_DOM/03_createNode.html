@@ -1,0 +1,32 @@
+// 14-JUNE-2026
+
+// we will see how to access the nodes from parent to children and vice-versa!
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parent to Children & Children to Parent</title>
+</head>
+<body style = "background-color: #414141; color: #ffffff;">
+    <div class="parent">
+        <div id = "dayOne">Monday</div>
+        <div>Tuesday</div>
+        <div>Wednesday</div>
+        <div>Thrusday</div>
+    </div>
+</body>
+<script>
+    const parent = document.querySelector("div")
+    console.log(parent); // will give you Parent + Children
+    console.log(parent.children); // will give HTML Collection
+    console.log(parent.children[2].innerHTML); // give Wednesday
+    const child = document.querySelector("#dayOne");
+    console.log(child);
+    console.log(child.parentElement); // will output the parent of child,
+    console.log(child.nextElementSibling); // will output div with Tuesday
+
+    // watch everything by turning on the live server and go to console!
+</script>
+</html>
