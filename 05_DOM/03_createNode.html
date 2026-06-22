@@ -22,11 +22,15 @@
     console.log(parent); // will give you Parent + Children
     console.log(parent.children); // will give HTML Collection
     console.log(parent.children[2].innerHTML); // give Wednesday
+    console.log(parent.firstElementChild.innerHTML); // will give Monday 
+    console.log(parent.lastElementChild.innerHTML); // will give Thrusday 
+
     const child = document.querySelector("#dayOne");
     console.log(child);
     console.log(child.parentElement); // will output the parent of child,
     console.log(child.nextElementSibling); // will output div with Tuesday
 
+    console.log(parent.childNodes); // will give something important see yourself! NodeList !!
     // watch everything by turning on the live server and go to console!
 </script>
 </html>
