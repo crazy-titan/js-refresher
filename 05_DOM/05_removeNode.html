@@ -1,0 +1,58 @@
+// 22-JUNE-2026
+
+// Now we will see how we can use functions to execute the nodes!
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nodes Remove and create using Function</title>
+</head>
+<body style = "background-color: #414141; color: ffffff;">
+    <ul class = "language">
+        <li>Javascript</li>
+        <li>Python</li>
+        <li>CPP</li>
+        <li>PHP</li>
+    </ul>
+</body>
+<script>
+    // we have various different way to manupulate the given DOM, we see one by one
+
+    // iterative way
+    function addLanguage(languageName){
+       const li = document.createElement('li'); // creation of a 'li' tag
+       li.innerHTML = `${languageName}`
+       document.querySelector(".language").appendChild(li)
+    }
+    addLanguage("new")
+
+    // optimised way
+    function optimiseLanguage(langName){
+        const li = document.createElement('li')
+        li.appendChild(document.createTextNode(`${langName}`))
+        document.querySelector('.language').appendChild(li)
+    }
+    optimiseLanguage("NEW")
+
+    // How to edit 
+    document.querySelector("li:nth-child(3)").innerHTML = "Meow" // CPP changed to Meow
+
+    // How to edit(optimise)
+    const lastChild = document.querySelector("li:last-child")
+    const newLi = document.createElement('li')
+    newLi.textContent = "new lang"
+    lastChild.replaceWith(newLi); // NEW changed to new lang
+
+    // How to edit
+    const firstChild = document.querySelector("li:first-child")
+    firstChild.outerHTML = "<li>1st Lang</li>"; // Javascript changed to 1st Lang
+
+
+    // How to remove
+    const removeItem = document.querySelector("li:last-child")
+    removeItem.remove(); // new lang gone 
+    
+</script>
+</html>
