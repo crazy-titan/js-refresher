@@ -1,0 +1,35 @@
+// 14-JUNE-2026
+
+// Now we will see how to create a new Node and append it to the document!
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Append a newly Created Node</title>
+</head>
+<body style = "background-color: #414141; color: #ffffff;">
+    // nothing to write here, just let it be!
+    // do everything with scripts
+</body>
+<script>
+    const div = document.createElement('div');
+    div.className = 'Parent'
+    div.id = 'newID'
+    div.setAttribute("title","generated title")
+    div.style.backgroundColor = "green"
+    div.style.padding = "12px"
+    // div.innerText = "InsideTech"; // not optimised way
+    // try this way
+    const textNode = document.createTextNode("InsideTech");
+    div.appendChild(textNode); // more optimised way
+
+    // how to show this div now in you web ?
+    // append it to the document's body
+    // console.log(div);
+
+    document.body.appendChild(div); // now i can see it on my web
+    
+</script>
+</html>
